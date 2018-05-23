@@ -23,7 +23,7 @@ export class Home extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(prevProps.user == this.props.user) return;
+    if(prevProps.user === this.props.user) return;
     let username = this.props.user;
     this.loadData(username)
   }

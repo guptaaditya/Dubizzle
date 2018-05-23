@@ -4,9 +4,10 @@ let initState = {
 }
 
 export default function gist(state = initState, action) {
+  let newState = {};
   switch(action.type) {
     case 'GET_GISTS_SUCCESS':
-      return Object.assign({}, state, {gists: action.gists});
+      newState = Object.assign({}, state, {gists: action.gists});
     break;
     case 'GET_GIST_FORK_SUCCESS':
       let gists = [...state.gists];
@@ -15,12 +16,13 @@ export default function gist(state = initState, action) {
       });
       if (forksOfGist)
         forksOfGist.forksList = action.forks;
-      return Object.assign({}, state, {gists});
+      newState = Object.assign({}, state, {gists});
     break;
     case 'CHANGE_USER_SEARCHED':
-      return Object.assign({}, state, {userSearched: action.user});
+      newState = Object.assign({}, state, {userSearched: action.user});
     break
     default:
-      return state;
+      newState = Object.assign({}, state);
   }
+  return newState;
 }

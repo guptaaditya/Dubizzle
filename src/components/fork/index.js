@@ -7,9 +7,6 @@ import * as gistActions from '../../actions/gist'
 import GistList from '../gistList/'
 
 export class Fork extends Component {
-  constructor(props){
-    super(props)
-  }
 
   componentDidMount() {
     if(this.props.match.params.fork_id)
