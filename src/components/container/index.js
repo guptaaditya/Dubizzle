@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 import Header from '../header/'
-import Footer from '../footer/'
-import Modal from '../modal/'
 
 const _ = require('lodash')
 
@@ -13,7 +11,6 @@ export class Container extends Component {
       <div className="container" style={styles.fullWidthTemplate}>
         <Header />
         {this.props.children}
-        <Footer />
       </div>
     )
   }

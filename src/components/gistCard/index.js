@@ -32,7 +32,7 @@ export default function GistCard ({details}) {
           <div>Total forks: {details.forksList ? details.forksList.length: 0}</div>
           <div>
             <div style={{width: '100%'}}>Recent Forks by:</div>
-            {forksList && forksList.map(fork => <Link to={`/${fork.id}`}><Avatar url={fork.owner.avatar_url} /></Link>)}
+            {forksList && forksList.map((fork, index) => <Link key={index} to={`/${fork.id}`}><Avatar url={fork.owner.avatar_url} /></Link>)}
           </div>
           <div>
             <div style={{width: '100%'}}>Owner:</div>
