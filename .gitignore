@@ -19,5 +19,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+credentials.txt
 
-keepnotes.txt
+#new change part of shik04
